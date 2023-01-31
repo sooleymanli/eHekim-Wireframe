@@ -936,7 +936,8 @@ section.after-question .left .top{
 
 section.after-question .left .top a{
   font-weight: 400;
-  font-size: 32px;
+  font-size: 2vW;
+
   line-height: 40px;
   color: #000000;
 
@@ -958,7 +959,7 @@ section.after-question .left form input{
   height: 57px;
   color: #000;
   text-indent: 27px;
-  font-size: 32px;
+  font-size: 2vH;
   line-height: 40px;
 
 }
@@ -967,14 +968,14 @@ section.after-question .left form input:placeholder-shown{
 
   color: #000;
   text-indent: 27px;
-  font-size: 32px;
+  font-size: 2vH;
   line-height: 40px;
 
 }
 section.after-question .left form select{
   width: 100%;
   height: 57px;
-  font-size: 32px;
+  font-size: 2vH;
   line-height: 40px;
   padding:0 27px;
 
@@ -1081,9 +1082,34 @@ footer h2{
 
   }
 
+  section.after-question .register{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
 
+    gap: 16px;
 
+  }
+  section.after-question .left{
+    width: 100%;
 
+  }
+  section.after-question .right{
+    width: 100%;
+  }
+  section.after-question{
+
+    padding: 20px;
+  }
+
+  section.after-question .left .top a{
+    font-weight: 400;
+    font-size: 3.5vW;
+
+    line-height: 40px;
+    color: #000000;
+
+  }
   section{
     padding: 56px 12px;
     background: #F5F5F5;
