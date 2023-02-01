@@ -1227,6 +1227,7 @@ section.category-body section.question-detail section.question .bottom{
   padding-left: 50px;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 section.category-body section.question-detail section.question .bottom span{
@@ -1498,6 +1499,9 @@ footer h2{
 
 /*Responsive*/
 @media screen and (max-width: 768px) {
+  section.category-body section.question-detail{
+    width: 100%;
+  }
   .slide-content{
     margin: 0 10px;
   }
@@ -1546,11 +1550,17 @@ footer h2{
 
 
   }
+  section.category-body{
+    padding: 0;
+  }
 }
 @media  only screen and (max-width:992px){
   main{
     padding: 12px;
     height: 500px;
+  }
+  section.category-body section.question-detail{
+    width: 100%;
   }
   main .right{
     display: none;
