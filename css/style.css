@@ -566,10 +566,8 @@ section.category-body section.category-main .send-question{
 
 }
 
-section.category-body section.category-main .send-question  a{
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+section.category-body section.category-main .send-question  input{
+
   width: 100%;
   height: 100%;
   background: #EDEDED;
@@ -578,7 +576,11 @@ section.category-body section.category-main .send-question  a{
   line-height: 15px;
   color: #A7A7A7;
   text-decoration: none;
+  text-indent: 24px;
+  border-radius: 5px;
 }
+
+
 
 section.category-body section.category-main a{
   background: #FFFFFF;
@@ -685,7 +687,7 @@ section.category-body aside section.categories ul li.active{
 
 }
 section.category-body aside section.categories ul li.active a{
- font-weight: 500;
+  font-weight: 500;
   color: #0152B1;
 }
 section.category-body aside section.categories ul li.active a::before{
@@ -749,7 +751,7 @@ section.category-body aside section.doctors-of-category  .doctors-lists a.doctor
 }
 
 section.category-body aside section.doctors-of-category  .doctors-lists a.doctor-item img.doctor-img {
-width: 40px;
+  width: 40px;
   height: 40px;
   object-fit: cover;
   border-radius: 50%;
@@ -757,13 +759,13 @@ width: 40px;
 }
 
 section.category-body aside section.doctors-of-category  .doctors-lists a.doctor-item .doctor-description {
-display: flex;
+  display: flex;
   flex-direction: column;
 
 }
 
 section.category-body aside section.doctors-of-category  .doctors-lists a.doctor-item .doctor-description h5 {
-font-size: 16px;
+  font-size: 16px;
   font-weight: 600;
   color: #000;
 }
@@ -826,7 +828,7 @@ section.category-body aside section.doctors-of-category  .doctors-lists a.doctor
   font-weight: 400;
   font-size: 32px;
   line-height: 40px;
-margin-bottom: 46px;
+  margin-bottom: 46px;
   color: #000000;
 
 }
@@ -856,7 +858,7 @@ margin-bottom: 46px;
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
-text-align: center;
+  text-align: center;
   color: #000000;
 
 }
@@ -989,7 +991,484 @@ section.after-question .left input[type="submit"]{
 
 
 
-  /*********************  Register Page End  *********************/
+/*********************  Register Page End  *********************/
+
+
+
+/*********************  Question Detail Page Start  *********************/
+section.category-body aside a.new-send-question{
+  background: #00D115;
+  border-radius: 10px;
+  height: 83px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.category-body aside a.new-send-question:hover{
+  background: #02c115;
+
+}
+section.category-body aside a.general-health{
+  height: 83px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 23px;
+  color: #000;
+}
+section.category-body aside a.general-health:hover{
+  background: #dadada;
+
+
+}
+
+
+section.category-body aside a.general-health .left{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+section.category-body aside a.general-health .left h3{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+
+  color: #000000;
+}
+section.category-body aside a.general-health .left p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
+
+}
+section.category-body aside a.general-health .right {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+
+  color: #000000;
+
+}
+section.category-body aside section.doctors-of-category a.show-all{
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #D9D9D9;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+
+}
+section.category-body aside section.doctors-of-category a.show-all:hover{
+  background: #eae9e9;
+
+}
+
+section.category-body aside section.similiar-questions {
+  width: 100%;
+  background: #fff;
+  border: 10px;
+  padding:13px 45px ;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+section.category-body aside section.similiar-questions hr{
+  border-top: 1px solid #C9C9C9;
+
+}
+section.category-body aside section.similiar-questions h5{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #000000;
+}
+section.category-body aside section.similiar-questions .similiar-questions-lists{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+section.category-body aside section.similiar-questions .similiar-questions-lists a{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #000000;
+}
+section.category-body aside section.similiar-questions .similiar-questions-lists a span.count-answer{
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #2B2B2B;
+  display: inline;
+  background: #D0FFBA;
+  border-radius: 10px;
+ padding: 2px 10px;
+
+
+}
+
+
+
+section.category-body section.question-detail{
+width: calc(100% - 400px);
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px 12px 26px;
+  gap: 0;
+
+}
+
+
+section.category-body section.question-detail section.question{
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 20px 12px 26px;
+
+}
+
+section.category-body section.question-detail section.question .top{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+section.category-body section.question-detail section.question .top .left{
+  display: flex;
+  gap: 13px;
+  width: 30%;
+  align-items: center;
+}
+section.category-body section.question-detail section.question .top .left .user-profile-photo{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+section.category-body section.question-detail section.question .top .left span {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #A2A2A2;
+}
+
+
+section.category-body section.question-detail section.question .top .right{
+  display: flex;
+  width: 70%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+
+}
+section.category-body section.question-detail section.question .top .right span{
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #BDBDBD;
+
+
+}
+
+section.category-body section.question-detail section.question .body{
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding-left: 50px;
+
+}
+section.category-body section.question-detail section.question .body h3{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #000000;
+
+}
+
+section.category-body section.question-detail section.question .body p{
+  font-weight: 400;
+  line-height: 15px;
+
+  color: #000000;
+
+}
+
+section.category-body section.question-detail section.question .bottom{
+  width: 100%;
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+  gap: 10px;
+}
+
+section.category-body section.question-detail section.question .bottom span{
+  color: #535353;
+  font-weight: 400;
+
+  line-height: 13px;
+
+}
+
+section.category-body section.question-detail section.question .bottom a{
+color: #0258FF;
+ }
+
+section.category-body section.question-detail section.question .bottom a:hover{
+  text-decoration: underline;
+}
+
+
+section.category-body section.question-detail section.comments{
+  width: 100%;
+  background:#fff;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 12px 20px 12px 26px;
+
+}
+section.category-body section.question-detail section.comments .comment-item{
+  width: 100%;
+  border-top: 1px solid #E8E8E8;
+   padding: 18px 12px 12px 0;
+display: flex;
+  justify-content: space-between;
+gap: 13px;
+align-items: center;
+}
+section.category-body section.question-detail section.comments .comment-item div{
+
+
+
+  display: flex;
+  gap: 13px;
+
+}
+
+section.category-body section.question-detail section.comments .comment-item .left .user-profile-photo{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+
+}
+
+
+section.category-body section.question-detail section.comments .comment-item .center{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+section.category-body section.question-detail section.comments .comment-item .center .top{
+  display: flex;
+  gap: 6px;
+
+  align-items: center;
+}
+section.category-body section.question-detail section.comments .comment-item .center .top .doctor-name{
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #2B2B2B;
+
+  background: #D0FFBA;
+  border-radius: 10px;
+  padding: 2px 10px;
+
+}
+
+section.category-body section.question-detail section.comments .comment-item .center .top .doctor-branch{
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #2B2B2B;
+
+  background: #FFBAEC;
+  border-radius: 10px;
+  padding: 2px 10px;
+
+}
+
+section.category-body section.question-detail section.comments .comment-item .center .top .user-name-branch{
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  /* identical to box height */
+
+
+  color: #A2A2A2;
+
+}
+section.category-body section.question-detail section.comments .comment-item .center .center p{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+
+  color: #000000;
+
+}
+
+section.category-body section.question-detail section.comments .comment-item .center .bottom span.when-added{
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #9A9A9A;
+}
+
+
+
+section.category-body section.question-detail section.comments .comment-item .right a{
+  width: 60px;
+  height: 51px;
+ display: flex;
+padding: 8px 15px;
+  background: #D9D9D9;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.category-body section.question-detail section.comments .comment-item .right a:hover{
+
+  background: #bababa;
+
+}
+
+section.category-body section.question-detail section.comments .comment-item .right a span.center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section.category-body section.question-detail section.comments .comment-item .right a span.center span{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+
+  color: #000000;
+}
+
+section.category-body section.question-detail section.comments .comment-item .right a span.like-answer{
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  /* identical to box height */
+
+  text-align: center;
+width: 60px;
+  display: inline-block;
+  color: #000000;
+}
+section.category-body section.question-detail section.reply{
+  width: 100%;
+  background:#Fff;
+  border-radius: 10px;
+  padding: 20px 37px 40px 37px;
+  display: flex;
+  gap: 26px;
+  flex-direction: column;
+margin-top: 20px;
+}
+
+section.category-body section.question-detail section.reply h5{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  /* identical to box height */
+
+
+  color: #000000;
+
+}
+
+section.category-body section.question-detail section.reply .buttons-body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #F9F9F9;
+  border: 1px dashed #C90000;
+  gap: 16px;
+  padding: 26px 0;
+
+
+}
+
+section.category-body section.question-detail section.reply .buttons-body .title{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  /* identical to box height */
+
+
+  color: #000000;
+
+ }
+section.category-body section.question-detail section.reply .buttons-body .buttons{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+section.category-body section.question-detail section.reply .buttons-body .buttons a{
+  background: #D9D9D9;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  /* identical to box height */
+
+
+  color: #000000;
+
+  padding: 7px 23px;
+
+
+}
+
+section.category-body section.question-detail section.reply .buttons-body .buttons a:hover{
+  background: #b9b6b6;
+}
+
+  /*********************  Question Detail Page End  *********************/
+
+
 
 
 
