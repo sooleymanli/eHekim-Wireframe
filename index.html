@@ -45,20 +45,16 @@
         <h2>Sualını yaz, <span> həkimlər </span>
         cavablasın </h2>
         <p>Sual göndərərkən adınız və ya əlaqə məlumatlarınız tələb olunmur, gizlilik qorunur.</p>
-
-
-
-
 </div>
 
         <form action="#" method="post">
-            <input type="text"  placeholder="Sualınızı qeyd edin">
-            <span>60 simvol</span>
+            <input type="text" id="question-short" placeholder="Sualınızı qeyd edin" maxlength="50">
+            <span id="input-symbol-length">50 simvol</span>
             <div class="img">
                 <img src="./img/pen.png" alt="pen" class="pen" >
             </div>
 
-            <textarea placeholder="Problemi ətraflı təsvir edin"></textarea>
+            <textarea id="textarea" placeholder="Problemi ətraflı təsvir edin"></textarea>
             <div class="img-text">
                 <img src="./img/pen.png" alt="pen" class="pen" >
             </div>
@@ -477,7 +473,31 @@
 
 
 
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function (){
+        $("#textarea").hide()
+        $("#textarea + .img-text").hide()
 
+        $("#question-short").on("input",()=>{
+
+            $("#input-symbol-length").html(50-$("#question-short").val().length+" simvol")
+
+            if($("#question-short").val().length >= 50 ){
+
+                $("#textarea").slideDown()
+                $("#textarea + .img-text").slideDown()
+                // $("#textarea").focus()
+
+            }else{
+                $("#textarea").slideUp()
+                $("#textarea + .img-text").slideUp()
+
+            }
+        })
+    })
+
+</script>
 
 
 <!-- Swiper JS -->

@@ -47,8 +47,10 @@
 <section class="category-body">
     <section class="category-main">
         <div class="send-question">
-            <input type="text" placeholder="Sualın var? Yaz və göndər, ixtisaslaşmış həkimlərdən cavab al">
-
+            <form action="#">
+            <input type="text" id="send-question-input" placeholder="Sualın var? Yaz və göndər, ixtisaslaşmış həkimlərdən cavab al">
+             <input type="submit" id="send-question-submit"  value="Göndər"  disabled>
+            </form>
 
         </div>
 
@@ -249,6 +251,26 @@
     <h2>FOOTER / Menyular</h2>
 </footer>
 
+
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function (){
+
+$("#send-question-input").on("input",function (){
+    if($("#send-question-input").val().length > 0){
+
+        $("#send-question-submit").prop( "disabled", false )
+    }else{
+        $("#send-question-submit").prop( "disabled", true )
+
+    }
+
+})
+
+    })
+
+</script>
 
 
 </body>

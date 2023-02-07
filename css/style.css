@@ -166,8 +166,9 @@ main .left form input[type="text"] {
     height: 44px;
     position: relative;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
+    text-transform:capitalize ;
 }
 
 main .left form input[type="text"]:placeholder-shown {
@@ -213,6 +214,7 @@ main .left form .img-text {
     left: 11px;
     top: 62px;
 
+
 }
 
 
@@ -234,6 +236,7 @@ main .left form textarea {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+    display: none;
 }
 
 main .left form textarea:placeholder-shown {
@@ -358,12 +361,14 @@ section article.final-questions .question-carts .question-cart {
     flex-direction: column;
     gap: 13px;
 }
+
 section article.final-questions .question-carts .question-cart:hover {
 
 
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
+
 section article.final-questions .question-carts .question-cart .author {
     font-weight: 400;
     font-size: 10px;
@@ -451,10 +456,11 @@ section article.popular-doctors h5 {
     height: 213px;
 }
 
-.card:hover{
+.card:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
+
 .image-content,
 .card-content {
     display: flex;
@@ -604,25 +610,48 @@ section.category-body section.category-main .send-question {
     background: #fff;
     border-radius: 10px;
     padding: 8px;
-    height: 50px;
+
+
 
 
 }
-
-section.category-body section.category-main .send-question input {
-
+section.category-body section.category-main .send-question form {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
     width: 100%;
-    height: 100%;
+
+}
+section.category-body section.category-main .send-question input[type="text"] {
+
+    width: 90%;
+    height: 40px;
     background: #EDEDED;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 15px;
-    color: #A7A7A7;
+    color: #000;
     text-decoration: none;
     text-indent: 24px;
     border-radius: 5px;
-}
+    padding: 5px 10px;
 
+}
+section.category-body section.category-main .send-question input[type="submit"]:disabled{
+    background-color: #7D7D7D;
+    cursor: not-allowed;
+}
+section.category-body section.category-main .send-question input[type="submit"]{
+    height: 40px;
+    border-radius: 5px;
+    background-color: darkgreen;
+    color: #fff;
+    padding: 5px 10px;
+    width: 10%;
+    cursor: pointer;
+
+
+}
 
 section.category-body section.category-main a {
     background: #FFFFFF;
@@ -634,7 +663,8 @@ section.category-body section.category-main a {
     justify-content: space-between;
     gap: 13px;
 }
-section.category-body section.category-main a:hover{
+
+section.category-body section.category-main a:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
@@ -719,7 +749,7 @@ section.category-body aside section.categories {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 55px;
+
     border-radius: 10px;
 }
 
@@ -752,7 +782,8 @@ section.category-body aside section.categories ul li.active a {
     font-weight: 500;
     color: #0152B1;
 }
-section.category-body aside section.categories ul li a:hover{
+
+section.category-body aside section.categories ul li a:hover {
     text-decoration: underline;
 }
 
@@ -822,7 +853,8 @@ section.category-body aside section.doctors-of-category .doctors-lists a.doctor-
     align-items: center;
     gap: 10px;
 }
-section.category-body aside section.doctors-of-category .doctors-lists a.doctor-item:hover{
+
+section.category-body aside section.doctors-of-category .doctors-lists a.doctor-item:hover {
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
@@ -922,7 +954,8 @@ section.category-body aside section.doctors-of-category .doctors-lists a.doctor-
     line-height: 40px;
 
 }
-.login-body section form input[type="submit"]:hover{
+
+.login-body section form input[type="submit"]:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     cursor: pointer;
 
@@ -944,11 +977,13 @@ section.category-body aside section.doctors-of-category .doctors-lists a.doctor-
     text-align: center;
     color: #000000;
 
-}.login-body section a:hover{
-    text-decoration: underline;
- }
+}
 
-     /*********************  Login Page End  *********************/
+.login-body section a:hover {
+    text-decoration: underline;
+}
+
+/*********************  Login Page End  *********************/
 
 
 /*********************  Register Page Start  *********************/
@@ -1210,7 +1245,11 @@ section.category-body aside section.similiar-questions .similiar-questions-lists
     font-size: 20px;
     line-height: 25px;
     color: #000000;
-}section.category-body aside section.similiar-questions .similiar-questions-lists a:hover{text-decoration: underline}
+}
+
+section.category-body aside section.similiar-questions .similiar-questions-lists a:hover {
+    text-decoration: underline
+}
 
 
 section.category-body aside section.similiar-questions .similiar-questions-lists a span.count-answer {
@@ -1782,13 +1821,454 @@ main.doctor-catalog-page section.doctor-catalog-components section.doctors-catal
     align-items: center;
 
 }
-main.doctor-catalog-page section.doctor-catalog-components section.doctors-catalog-items .doctor-catalog-pagination a:hover{
+
+main.doctor-catalog-page section.doctor-catalog-components section.doctors-catalog-items .doctor-catalog-pagination a:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
 
 
 /*********************  Doctor Catalog Page End  *********************/
+
+
+/*********************  Doctor Profile Page Start  *********************/
+
+.main-doctor-profile {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 50px 70px;
+
+}
+
+.main-doctor-profile .doctor-reels {
+    width: calc(100% - 400px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.main-doctor-profile .doctor-reels .top-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.main-doctor-profile .doctor-reels .top-buttons button {
+    width: 30%;
+    height: 61px;
+    background: #D9D9D9;
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 30px;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.main-doctor-profile .doctor-reels .top-buttons button.active {
+    background: #95F2FF;
+}
+
+.main-doctor-profile .doctor-reels .top-buttons button:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item {
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    padding: 23px 27px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .top .left{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    color: #A2A2A2;
+
+}.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .top .right{
+    padding: 5px 10px;
+    background: #9f9b9b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    border-radius: 10px;
+
+}
+}.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .top .right svg{
+    width: 16px;
+    height: 16px;
+
+
+ }
+
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .center{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .center .name{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+
+
+}
+
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .center .name .doctor-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .center .name span{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: #000000;
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .center .name svg{
+    width: 16px;
+    height: 16px;
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .center p{
+    font-weight: 400;
+    font-size: 16px;
+
+    color: #444141;
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .bottom{
+    width: 100%;
+    display: flex;
+    margin-top: 16px;
+
+    border-radius: 0;
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .bottom .left{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .bottom .left svg{
+    width: 20px;
+    height: 20px;
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .bottom .right{
+    width: 90%;
+    background-color: #ece9e9;
+    border-left: 10px solid #211f1f;
+    display: flex;
+    flex-direction: column;
+}
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .bottom .right .top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom:1px solid #9f9d9d;
+
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .bottom .right .top .left{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    color: #A2A2A2;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 0;
+
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .bottom .right .top .right-s{
+    display: flex;
+    gap: 10px;
+   align-items: center;
+
+}
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .bottom p{
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+padding: 10px;
+    color: #383737;
+
+}
+
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .bottom .bottom{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    gap: 16px;
+
+}
+.main-doctor-profile .doctor-reels .doctor-reply .doctor-body-item .bottom .bottom span{
+
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #a29f9f;
+}
+
+
+.main-doctor-profile .doctor-information {
+    width: 400px;
+
+
+}
+
+.main-doctor-profile .doctor-information .body {
+    width: 400px;
+    background: #fff;
+    padding: 32px 25px;
+
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-doctor-profile .doctor-information .body .top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.main-doctor-profile .doctor-information .body .top .doctor-profile-photo {
+    width: 200px;
+    background-position: center;
+    background-size: contain;
+
+    height: 200px;
+    border-radius: 50%;
+
+
+}
+
+.main-doctor-profile .doctor-information .body .top h4 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: #000000;
+
+
+}
+
+.main-doctor-profile .doctor-information .body .top p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #000000;
+
+}
+
+.main-doctor-profile .doctor-information .body .top span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+
+.main-doctor-profile .doctor-information .body .top .footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.main-doctor-profile .doctor-information .body .top .footer .left span, .main-doctor-profile .doctor-information .body .top .footer .right span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.main-doctor-profile .doctor-information .body .divider {
+    width: 100%;
+    height: 1px;
+    background: #C9C9C9;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.main-doctor-profile .doctor-information .body .bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-doctor-profile .doctor-information .body .bottom a {
+    width: 349px;
+    height: 58px;
+    background: #81FFBB;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+
+}
+.main-doctor-profile .doctor-information .body .bottom a:hover {
+    background: #71efab;
+
+}
+
+
+.main-doctor-profile .doctor-reels .doctor-reels-body .doctor-about{
+    width: 100%;
+display: none;
+padding: 23px 27px;
+    border-radius: 10px;
+    background: #fff;
+
+
+}
+
+.main-doctor-profile .doctor-reels .doctor-reels-body .doctor-about p{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+
+}
+
+.main-doctor-profile .doctor-reels .doctor-reels-body .patients-opinions{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.main-doctor-profile .doctor-reels .doctor-reels-body .patients-opinions .patients-opinions-item{
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 12px 26px 30px 26px;
+
+}
+
+.main-doctor-profile .doctor-reels .doctor-reels-body .patients-opinions .patients-opinions-item .left{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.main-doctor-profile .doctor-reels .doctor-reels-body .patients-opinions .patients-opinions-item .left .patients-img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-doctor-profile .doctor-reels .doctor-reels-body .patients-opinions .patients-opinions-item .right span{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    /* identical to box height */
+
+
+    color: #A2A2A2;
+}
+
+.main-doctor-profile .doctor-reels .doctor-reels-body .patients-opinions .patients-opinions-item .right p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+margin-top: 12px;
+    color: #000000;
+}
+
+    /*********************  Doctor Profile Page End  *********************/
 
 
 /*********************  Footer  Start  *********************/
@@ -1816,6 +2296,37 @@ footer h2 {
 
 /*********************  Responsive Media Query  start  *********************/
 @media screen and (max-width: 768px) {
+    .main-doctor-profile {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+
+        gap: 20px;
+        padding: 50px 12px;
+
+    }
+    .main-doctor-profile .doctor-information .body .bottom a {
+        width: 100%;
+    }
+    .main-doctor-profile .doctor-information {
+        width: 100%;
+
+
+    }
+    .main-doctor-profile .doctor-reels {
+        width: 100%;
+
+    }
+
+    .main-doctor-profile .doctor-information .body {
+        width: 100%;
+        background: #fff;
+        padding: 32px 25px;
+
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
     section.category-body section.question-detail {
         width: 100%;
     }
@@ -1875,6 +2386,21 @@ footer h2 {
 }
 
 @media only screen and (max-width: 992px) {
+
+    .main-doctor-profile .doctor-reels .top-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+    }
+
+    .main-doctor-profile .doctor-reels .top-buttons a {
+        width: 100%;
+
+    }
     main.doctor-catalog-page section.doctor-catalog-components {
         width: 100%;
         display: flex;
@@ -1885,6 +2411,7 @@ footer h2 {
 
 
     }
+
     main.doctor-catalog-page section.doctor-catalog-components aside.doctor-branches {
         width: 100%;
 
@@ -1902,6 +2429,7 @@ footer h2 {
         position: sticky;
         top: 10px;
     }
+
     main {
         padding: 12px;
         height: 500px;
